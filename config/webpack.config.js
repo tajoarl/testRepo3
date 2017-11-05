@@ -1,14 +1,14 @@
 module.exports = {
     entry: './app/index.js',
     output: {
-        path: '/public/',
+        path: process.cwd() + '/public/',
         publicPath: '/',
         filename: 'bundle.js'
     },
     devServer: {
         inline: true,
         host: '0.0.0.0',
-        contentBase: '/public/',
+        contentBase: process.cwd() + '/public/',
         disableHostCheck: true
     },
     module: {
